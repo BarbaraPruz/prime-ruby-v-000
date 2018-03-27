@@ -3,7 +3,7 @@ def prime? (num)
   if num <= 1
     return false
   end
-  notPrime = [2..num].any? { |n| num%n==0}
+  notPrime = (2..num).any? { |n| num%n==0}
   !notPrime
 #  is_prime = true
 #  factor = 2
