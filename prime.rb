@@ -3,14 +3,16 @@ def prime? (num)
   if num <= 1
     return false
   end
-  is_prime = true
-  factor = 2
-  limit = num/2
-  while factor<=limit && is_prime
-    if num%factor == 0
-      is_prime=false
-    end
-    factor += 1
-  end
-  is_prime
+  notPrime = [2..num].to_a.any? { |n| num%n==0}
+  !notPrime
+#  is_prime = true
+#  factor = 2
+#  limit = num/2
+#  while factor<=limit && is_prime
+#    if num%factor == 0
+#      is_prime=false
+#    end
+#    factor += 1
+#  end
+#  is_prime
 end
