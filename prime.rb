@@ -5,7 +5,7 @@ def prime? (num)
   elsif num == 2
     prime = true
   else
-    prime = (2..(num/2)).all? { |n| num%n!=0}
+    prime = (2..num/2).all? { |n| num%n!=0}
   end
   prime
 #  is_prime = true
