@@ -5,7 +5,7 @@ def prime? (num)
   elsif num == 2
     prime = true
   else
-    prime = (2..(num/2)+1).any? { |n| num%n==0}
+    prime = (2..(num/2)).any? { |n| num%n==0}
     prime = !prime
   end
   prime
